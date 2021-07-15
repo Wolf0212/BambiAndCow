@@ -1,0 +1,187 @@
+* {
+    font-family: 'Chieu Display', 'SVN-Gallery Modern', 'SVN-Sage';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#app1 {
+    margin: 0px 150px 0px 150px;
+    height: 85vh;
+}
+
+#navbar {
+    height: 173px;
+    position: absolute;
+    width: auto;
+}
+
+.navbar.container {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 83.33%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    margin: auto;
+}
+
+.logo {
+    line-height: 1;
+}
+
+.link {
+    font-family: SVN-Gallery Modern;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: gray;
+    font-size: 18px;
+}
+
+.link:hover {
+    color: black;
+    font-weight: bold;
+}
+
+#account {
+    float: right;
+    font-weight: bold;
+    color: black;
+}
+/* End of navbar css */
+
+.main-content {
+    width: 83.33%;
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+}
+
+.panel {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+#left-panel {
+    overflow: hidden;
+}
+
+.active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    opacity: 1;
+    transition: 1s all;
+}
+
+.inactive {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    opacity: 0;
+    transition: 1s all;
+}
+
+.active-btn span {
+    color: black;
+}
+
+.inactive-btn span {
+    color: gray;
+}
+
+input {
+    font-family: "Playfair Display";
+    font-size: 16px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: none;
+    line-height: 40px;
+    animation: fadeInDown 1s;
+}
+@keyframes fadeInDown {
+   0% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.input {
+    margin-bottom: 1.2rem;
+}
+
+#password {
+    margin-bottom: 0.1rem;
+}
+
+.forgotPass {
+    float: right;
+    position: relative;
+    font-family: "Playfair Display";
+    font-size: 14px;
+    color: black;
+    line-height: 32px;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    top: 12px;
+    animation: fadeInDown 1s;
+
+}
+.pointer {
+    width: 3.2rem;
+    height: 2.8rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    transform: rotate(-90deg);
+    display: block;
+    clear: both;
+    animation: fadeInDown 1s;
+}
+.buttons {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+}
+.active-btn {
+    border: 1px solid black;
+    transition: .5s ease-in-out all;
+}
+@keyframes border {
+    from {
+        border: 0;
+    }
+    to {
+        border: 100;
+    }
+}
+.login, .register {
+    display: table;
+    text-align: center;
+    border-radius: 50%;
+    width: 24rem;
+    height: 5.65rem;
+}
+li > span {
+    display: table-cell;
+    font-size: 40px;
+    vertical-align: middle;
+}
