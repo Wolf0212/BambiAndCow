@@ -7,23 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale">
     <!-- CSS link -->
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/forgotPass.css">
 </head>
 <body>
-    <div class="navbar container">
-        <a href="#" class="logo">
-            <img src="images/logo.png" alt="" class="img-link" width="40px" height="66px" style="line-height: 0;">
-        </a>
-        <span class="child"><a href="#" class="link">Trang chủ</a></span>
-        <span class="child"><a href="#" class="link">Dịch vụ</a></span>
-        <span class="child"><a href="#" class="link">Đăng ký trước</a></span>
-        <span class="child"><a href="#" class="link">Nhà tang lễ</a></span>
-        <span class="child">w<a href="#" class="link">FAQ</a></span>
-        <span class="child"><a href="#" class="link">Đánh giá</a></span>
-        <span class="child" id="account"><a href="#" class="link">Tài khoản</a></span>
-    </div>
-    <div class="app1">
-        
+    <div class="container">
+        <ul class="navbar container" style="list-style: none;">
+            <li>
+                <a href="#" class="logo">
+                    <img src="images/logo copy.png" alt="" class="img-link" width="40px" height="66px"
+                        style="line-height: 0;">
+                </a>
+            </li>
+            <li class="child"><a href="#" class="link">Trang chủ</a></li>
+            <li class="child"><a href="#" class="link">Dịch vụ</a></li>
+            <li class="child"><a href="#" class="link">Đăng ký trước</a></li>
+            <li class="child"><a href="#" class="link">Nhà tang lễ</a></li>
+            <li class="child"><a href="#" class="link">FAQ</a></li>
+            <li class="child"><a href="#" class="link">Đánh giá</a></li>
+            <li style="width: 30%;" class="child"><a id="account" href="#" class="link">Tài khoản</a></li>
+        </ul>
+        <div class="main-content">
+            <div id="left-panel" class="panel">
+                <div class="content-left active" id="login-text">
+                    <input type="text" id="username" class="input" placeholder="Email">
+                    <input type="password" id="password" class="input" placeholder="Tên đăng nhập">
+                    <a href="#"><img src="images/pointer copy.png" alt="pointer" class="pointer"></a>
+                </div>
+                <div class="content-left inactive" id="register-text">
+                    <input type="text" class="input" placeholder="Email">
+                    <input type="password" class="input" placeholder="Tên đăng nhập">
+                    <input type="text" class="input" placeholder="Mật khẩu">
+                    <input type="password" class="input" placeholder="Nhập lại mật khẩu">
+                    <a href="#"><img src="images/pointer copy.png" alt="pointer" class="pointer"></a>
+                </div>
+            </div>
+            <div id="right-panel" class="panel">
+                <ul class="buttons">
+                    <li class="login active-btn" id="login-btn"><span style="cursor: pointer;"
+                            onclick="isActive('login')">Quên mật khẩu</span></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 
