@@ -15,10 +15,20 @@ navigator.addEventListener('mouseout', () => {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('animation');
+            document.querySelector('.slide').classList.add('animation');
             return;
         }
-        entry.target.classList.remove('animation');
+        document.querySelector('.slide').classList.remove('animation');
     });
 });
 observer.observe(document.querySelector('.app2'));
+function slide(direction) {
+    if(direction == 'right') {
+        document.querySelector('.slide').style.marginLeft = '-50%';
+        document.getElementById('slide_2').style.opacity = '1';
+    }
+    else {
+        document.querySelector('.slide').style.marginLeft = '0%';
+        document.getElementById('slide_2').style.opacity = '0';
+    }
+}

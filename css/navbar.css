@@ -1,0 +1,45 @@
+#navbar {
+    height: 173px;
+    position: absolute;
+    width: auto;
+}
+
+.navbar.container {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 83.33%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    margin: auto;
+}
+
+.child:active {
+    text-decoration: underline;
+}
+
+.logo {
+    line-height: 1;
+}
+
+.link {
+    font-family: SVN-Gallery Modern;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: gray;
+    font-size: 18px;
+}
+
+.link:hover {
+    color: black;
+    font-weight: bold;
+}
+
+#account {
+    margin-left: 10.5rem;
+}
