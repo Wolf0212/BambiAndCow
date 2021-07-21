@@ -1,25 +1,25 @@
-#navbar {
-    height: 173px;
-    position: absolute;
-    width: auto;
-}
-
 .navbar.container {
     display: flex;
-    background-color: #FFFFFF;
     width: 83.33%;
+    height: 5rem;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 20px;
+    padding: 10px 0px 20px 0px;
     border-bottom: 1px solid black;
     z-index: 100;
     top: 0;
     position: sticky;
+    list-style: none;
     margin: auto;
 }
 
-.child:active {
-    text-decoration: underline;
+.child:last-child {
+    width: 30%;
+}
+
+.child.active {
+    color: black;
+    font-weight: bold;
 }
 
 .logo {
@@ -41,5 +41,5 @@
 }
 
 #account {
-    margin-left: 10.5rem;
+    float: right;
 }

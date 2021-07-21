@@ -57,6 +57,9 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     height: 900px;
     background-color: #EAEAEA;
 }
@@ -67,24 +70,22 @@ body {
     height: 90vh;
 }
 
-#navbar {
-    height: 173px;
-    position: absolute;
-    width: auto;
-}
-
 .navbar.container {
     display: flex;
     background-color: #EAEAEA;
     width: 83.33%;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 20px;
+    padding: 10px 0px 20px 0px;
     border-bottom: 1px solid black;
     z-index: 100;
     top: 0;
     position: sticky;
     margin: auto;
+}
+
+.child:last-child {
+    width: 20%;
 }
 
 .child:active {
@@ -110,7 +111,7 @@ body {
 }
 
 #account {
-    margin-left: 10.5rem;
+    float: right;
 }
 
 /* ước nguyện bình sinh */
@@ -314,10 +315,6 @@ body {
 .navigator-2, .navigator-3 {
     width: 100%;
     text-align: center;
-}
-
-a:hover ~ .navigator-2 ~ .content-app2-left ~ .slide {
-    margin-left: -150%;
 }
 .navigator-2 > a > img {
     transform: rotate(-90deg);

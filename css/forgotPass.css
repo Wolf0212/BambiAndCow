@@ -1,0 +1,146 @@
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInDownArrow {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        transform: rotate(-90deg);
+    }
+}
+
+* {
+    font-size: 20px;
+    font-family: 'Chieu Display', 'SVN-Gallery Modern', 'SVN-Sage';
+}
+
+.main-content {
+    width: 83.33%;
+    min-height: calc(100vh - 6.5rem);
+    margin: 0 auto;
+    display: flex;
+}
+
+.panel {
+    width: 50%;
+}
+
+/* Right panel */
+
+.noti {
+    opacity: 0;
+    position: relative;
+    top: 10.15rem;
+    width: 17.2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.icon {
+    width: 2.45rem;
+    height: 2.45rem;
+}
+
+.noti-text {
+    font-family: 'SVN-Sage';
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.pass-text {
+    position: relative;
+    top: 13rem;
+    display: table;
+    width: 24rem;
+    height: 5.65rem;
+    font-size: 40px;
+    margin: 0 auto;
+}
+
+.pass-text span {
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: .7rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 40px;
+    display: table-cell;
+}
+
+/* Left panel */
+
+.slider {
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+}
+
+.slide {
+    width: 33.33333333%;
+    font-family: 'Playfair Display';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.5s all;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.content input {
+    font-family: 'Playfair Display';
+    font-size: 16px;
+    border: 0;
+    border-bottom: 1px solid #000;
+    outline: none;
+    line-height: 40px;
+    animation: fadeInDown 1s;
+    margin-bottom: 1.2rem;
+}
+
+.pointer {
+    width: 3.2rem;
+    height: 2.8rem;
+    margin: 0 auto;
+    margin-top: 2.6rem;
+    display: block;
+    clear: both;
+    transform: rotate(-90deg);
+    animation: fadeInDownArrow 1.5s;
+}
+
+#slide2, #slide3 {
+    opacity: 0;
+}

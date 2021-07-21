@@ -1,1 +1,96 @@
-<!DOCTYPE html><html><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE">    <meta name="viewport" content="width=device-width, initial-scale">    <!-- CSS link -->    <link rel="stylesheet" href="css/navbar.css">    <link rel="stylesheet" href="css/login.css">    <link rel="stylesheet" href="css/forgotPass.css"></head><body>    <div class="container">        <ul class="navbar container" style="list-style: none;">            <li>                <a href="index.html" class="logo">                    <img src="images/logo copy.png" alt="" class="img-link" width="40px" height="66px"                        style="line-height: 0;">                </a>            </li>            <li class="child"><a href="index.html" class="link">Trang chủ</a></li>            <li class="child"><a href="#" class="link">Dịch vụ</a></li>            <li class="child"><a href="#" class="link">Đăng ký trước</a></li>            <li class="child"><a href="#" class="link">Nhà tang lễ</a></li>            <li class="child"><a href="#" class="link">FAQ</a></li>            <li class="child"><a href="#" class="link">Đánh giá</a></li>            <li style="width: 30%;" class="child"><a id="account" href="#" class="link">Tài khoản</a></li>        </ul>        <div class="main-content">            <div id="left-panel" class="panel">                <div class="content-left active" id="login-text">                    <input type="text" id="username" class="input" placeholder="Email">                    <input type="password" id="password" class="input" placeholder="Tên đăng nhập">                    <a href="#"><img src="images/pointer copy.png" alt="pointer" class="pointer"></a>                </div>                <div class="content-left inactive" id="register-text">                    <input type="text" class="input" placeholder="Email">                    <input type="password" class="input" placeholder="Tên đăng nhập">                    <input type="text" class="input" placeholder="Mật khẩu">                    <input type="password" class="input" placeholder="Nhập lại mật khẩu">                    <a href="#"><img src="images/pointer copy.png" alt="pointer" class="pointer"></a>                </div>            </div>            <div id="right-panel" class="panel">                <ul class="buttons">                    <li class="login active-btn" id="login-btn"><span style="cursor: pointer;"                            onclick="isActive('login')">Quên mật khẩu</span></li>                </ul>            </div>        </div>    </div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/forgotPass.css">
+</head>
+
+<body>
+    <ul class="navbar container">
+        <li>
+            <a href="index.html" class="logo">
+                <img src="images/logo copy.png" alt="" class="img-link" width="40px" height="66px"
+                    style="line-height: 0;">
+            </a>
+        </li>
+        <li class="child"><a href="index.html" class="link">Trang chủ</a></li>
+        <li class="child"><a href="#" class="link">Dịch vụ</a></li>
+        <li class="child"><a href="#" class="link">Đăng ký trước</a></li>
+        <li class="child"><a href="#" class="link">Nhà tang lễ</a></li>
+        <li class="child"><a href="#" class="link">FAQ</a></li>
+        <li class="child"><a href="#" class="link">Đánh giá</a></li>
+        <li class="child"><a id="account" href="login.html" class="link">Tài khoản</a></li>
+    </ul>
+    <div class="main-content">
+        <!-- Slider -->
+        <div class="slider panel" id="left-panel">
+            <!-- Slides -->
+            <div class="slides">
+                <div class="slide" id="slide1">
+                    <div class="content">
+                        <input type="text" id="username" class="input" placeholder="Email">
+                        <input type="password" id="password" class="input" placeholder="Tên đăng nhập">
+                        <a href="#" onclick="slide('middle')"><img src="images/pointer copy.png" alt="pointer" class="pointer"></a>
+                    </div>
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="content">
+                        <input style="opacity: 0;" type="text" id="username" class="input">
+                        <input type="text" id="username" class="input" placeholder="Mã xác minh">
+                        <a href="#" onclick="slide('last')"><img src="images/pointer copy.png" alt="pointer" class="pointer"></a>
+                    </div>
+                </div>
+                <div class="slide" id="slide3">
+                    <div class="content">
+                        <input type="text" id="username" class="input" placeholder="Mật khẩu mới">
+                        <input type="text" id="username" class="input" placeholder="Mật khẩu mới">
+                        <a href="#"><img src="images/pointer copy.png" alt="pointer" class="pointer"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Static panel -->
+        <div class="panel" id="right-panel">
+            <div class="noti">
+                <img src="images/icon.png" class="icon">
+                <div class="noti-text">Hãy kiểm tra hòm thư để nhận mã xác minh</div>
+            </div>
+            <div class="pass-text">
+                <span>Quên mật khẩu</span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" defer>
+        function slide(position) {
+            let slide1 = document.getElementById('slide1');
+            let slide2 = document.getElementById('slide2');
+            let slide3 = document.getElementById('slide3');
+            let noti = document.querySelector('.noti');
+            if(position == 'first') {
+                slide1.style.marginLeft = '0%';
+                slide2.style.opacity = '0';
+                slide3.style.opacity = '0';
+            }
+            else if(position == 'middle') {
+                slide1.style.marginLeft = '-33.33333333%';
+                slide2.style.opacity = '1';
+                noti.style.animation = 'fadeInDown 1s';
+                noti.style.opacity = '1';
+            }
+            else if(position == 'last') {
+                slide1.style.marginLeft = '-66.66666666%';
+                slide3.style.opacity = '1';
+                noti.style.animation = 'fadeInUp 1s';
+                noti.style.opacity = '0';
+            }
+        }
+    </script>
+</body>
+
+</html>
