@@ -1,0 +1,31 @@
+.main-content {
+    display: flex;
+}
+.left-panel {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-panel {
+    width: 60%;
+    height: 100%;
+}
+
+.left-panel span {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Chieu Display';
+    font-size: 130px;
+    line-height: 156px;
+    letter-spacing: .1rem;
+}
+
+.left-panel .navigator img {
+    width: 62.5px;
+    height: 59.52px;
+}
