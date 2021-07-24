@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #EAEAEA;
 }
 
 .navbar.container {
@@ -12,7 +13,7 @@
     align-items: flex-end;
     padding: 10px 0px 10px 0px;
     border-bottom: 1px solid black;
-    background-color: white;
+    background-color: #EAEAEA;
     z-index: 100;
     top: 0;
     position: sticky;
@@ -49,4 +50,10 @@
 
 #account {
     float: right;
+}
+
+.main-content {
+    width: 83.33%;
+    height: calc(100vh - 6rem);
+    margin: 0 auto;
 }
