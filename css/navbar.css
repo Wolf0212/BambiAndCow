@@ -57,3 +57,36 @@
     height: calc(100vh - 6rem);
     margin: 0 auto;
 }
+
+.dropdown-content {
+    border: 1px solid black;
+    width: 11rem;
+    position: absolute;
+    left: 22rem;
+    top: 0;
+    margin-top: .5rem;
+    display: none;
+    transition: .5s ease;
+}
+
+.dropdown-content.active {
+    display: block;
+    top: 6rem;
+}
+
+.dropdown-content .row {
+    font-size: 18px;
+    font-family: SVN-Gallery Modern;
+    color: gray;
+    height: 3rem;
+    display: flex;
+    padding-left: 1rem;
+    align-items: center;
+}
+
+.dropdown-content .row:hover {
+    background-color: rgb(202, 202, 202);
+    color: black;
+}
+
+
