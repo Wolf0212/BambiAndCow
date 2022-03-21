@@ -1,1 +1,119 @@
-* {    margin: 0;    padding: 0;    box-sizing: border-box;    background-color: #EAEAEA;}.navbar.container {    display: flex;    width: 83.33%;    height: 6rem;    justify-content: space-between;    align-items: flex-end;    padding: 10px 0px 10px 0px;    border-bottom: 1px solid black;    background-color: #EAEAEA;    z-index: 100;    top: 0;    position: sticky;    list-style: none;    margin: auto;}.child:last-child {    width: 30%;}.child.active a {    color: black;    font-weight: bold;}.logo {    line-height: 1;}.link {    font-family: SVN-Gallery Modern;    text-decoration: none;    margin: 0;    padding: 0;    color: gray;    font-size: 18px;}.link:hover {    color: black;    font-weight: bold;}#account {    float: right;}.main-content {    width: 83.33%;    height: calc(100vh - 6rem);    margin: 0 auto;}.dropdown-content {    border: 1px solid black;    width: 11rem;    position: absolute;    left: 22rem;    top: 0;    margin-top: .5rem;    display: none;    transition: .5s ease;}.dropdown-content.active {    display: block;    top: 6rem;    z-index: 100;}.dropdown-content .row {    font-size: 18px;    font-family: SVN-Gallery Modern;    color: gray;    height: 3rem;    display: flex;    padding-left: 1rem;    align-items: center;  } .dropdown-content .row:hover {    background-color: rgb(202, 202, 202);    }.dropdown-content .row a {    text-decoration: none;    background-color:transparent;    color: gray;}.dropdown-content .row a:hover {    color: black;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EAEAEA;
+
+}
+
+body {
+    min-height: 300vh;
+}
+
+.navbar.container {
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 70px;
+    margin-top: 26px;
+    padding: 29px 89px 29px 73px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #EAEAEA;
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    list-style: none;
+    width: 100%;
+}
+
+.child:last-child {
+    flex-grow: 2;
+    overflow: visible;
+}
+
+.child:last-child a {
+    border: 1px solid black;
+    box-shadow: 6px 6px 0px;
+    background: #3673AD;
+    color: #F1F1E6;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.child.active a {
+    color: black;
+    font-weight: bold;
+}
+
+.logo {
+    line-height: 1;
+}
+
+.link {
+    font-family: 'Proxima Nova';
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: gray;
+    font-size: 20px;
+}
+
+.link:hover {
+    color: black;
+    font-weight: bold;
+}
+
+#account {
+    float: right;
+}
+
+.main-content {
+    width: 83.33%;
+    height: calc(100vh - 6rem);
+    margin: 0 auto;
+}
+
+.dropdown-content {
+    border: 1px solid black;
+    width: 11rem;
+    position: absolute;
+    left: 22rem;
+    top: 0;
+    margin-top: .5rem;
+    display: none;
+    transition: .5s ease;
+}
+
+.dropdown-content.active {
+    display: block;
+    top: 6rem;
+    z-index: 100;
+}
+
+.dropdown-content .row {
+    font-size: 18px;
+    font-family: SVN-Gallery Modern;
+    color: gray;
+    height: 3rem;
+    display: flex;
+    padding-left: 1rem;
+    align-items: center;
+}
+
+.dropdown-content .row:hover {
+    background-color: rgb(202, 202, 202);
+
+}
+
+.dropdown-content .row a {
+    text-decoration: none;
+    background-color: transparent;
+    color: gray;
+}
+
+.dropdown-content .row a:hover {
+    color: black;
+}
