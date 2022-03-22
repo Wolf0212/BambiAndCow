@@ -7,7 +7,14 @@
 }
 
 body {
-    min-height: 300vh;
+    overflow: scroll;
+}
+
+.navbar-wrapper {
+    padding-top: 26px;
+    position: sticky;
+    top: 0;
+    z-index: 100000;
 }
 
 .navbar.container {
@@ -17,14 +24,10 @@ body {
     align-items: center;
     justify-content: flex-start;
     gap: 70px;
-    margin-top: 26px;
     padding: 29px 89px 29px 73px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     background-color: #EAEAEA;
-    z-index: 100;
-    top: 0;
-    position: sticky;
     list-style: none;
     width: 100%;
 }
